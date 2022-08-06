@@ -13,7 +13,7 @@ function onStartButton() {
 
     // змінюємо колір фону по таймеру 1сек
 
-    timerId = setInterval(() => {
+ const timerId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
 };
