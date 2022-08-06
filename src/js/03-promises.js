@@ -32,7 +32,7 @@ function onSubmitForm(evt) {
   const stepTime = Number(delayStep.value);
   const amountNumber = Number(delayAmount.value);
 
-  for (i = 0; i <= amountNumber; i += 1) {
+  for (let i = 0; i <= amountNumber; i += 1) {
     createPromise(i, delayTime)
       .then(data => Notify.success(data))
       .catch(data => Notify.failure(data));
