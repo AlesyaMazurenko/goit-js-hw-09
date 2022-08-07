@@ -1,5 +1,6 @@
 const startButton = document.querySelector('button[data-start]');
 const stopButton = document.querySelector('button[data-stop]');
+let timerId = null;
 
 //робимо кнопку не активною
 stopButton.disabled = true;
@@ -13,7 +14,7 @@ function onStartButton() {
 
     // змінюємо колір фону по таймеру 1сек
 
- const timerId = setInterval(() => {
+timerId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
 };
